@@ -71,9 +71,11 @@ p { margin-bottom: 24px; }
 
 .col_nav li { padding-bottom: 6px; }
 
+.col_nav li.active a { color: #28c4f4; }
+
 .col_nav a { color: #212934; }
 
-.col_nav a:hover { text-decoration: none; color: #1571ae; }
+.col_nav a:hover { text-decoration: none; color: #28c4f4; }
 
 .col_etc { max-width: 800px; width: 100%; }
 

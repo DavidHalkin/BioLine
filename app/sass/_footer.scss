@@ -18,12 +18,17 @@
 	}
 	li{
 		padding-bottom: 6px;
+		&.active{
+			a{
+				color: #28c4f4;
+			}
+		}
 	}
 	a{
 		color: #212934;
 		&:hover{
 			text-decoration: none;
-			color: #1571ae;
+			color: #28c4f4;
 		}
 	}
 }
