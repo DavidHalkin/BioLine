@@ -1,0 +1,81 @@
+@font-face {
+	font-family: "Icons";
+	src: url('../fonts/icons_custom/Icons.eot');
+	src: url('../fonts/icons_custom/Icons.eot?#iefix') format('eot'),
+		url('../fonts/icons_custom/Icons.woff2') format('woff2'),
+		url('../fonts/icons_custom/Icons.woff') format('woff'),
+		url('../fonts/icons_custom/Icons.ttf') format('truetype'),
+		url('../fonts/icons_custom/Icons.svg#Icons') format('svg');
+}
+
+@mixin icn-styles {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+	line-height: 1;
+}
+
+%icn {
+	@include icn-styles;
+}
+
+@function icn-char($filename) {
+	$char: "";
+
+	@if $filename == clock {
+		$char: "\E001";
+	}
+	@if $filename == fb {
+		$char: "\E002";
+	}
+	@if $filename == insta {
+		$char: "\E003";
+	}
+	@if $filename == mail {
+		$char: "\E004";
+	}
+	@if $filename == telegram {
+		$char: "\E005";
+	}
+	@if $filename == wickr {
+		$char: "\E006";
+	}
+
+	@return $char;
+}
+
+@mixin icn($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icn;
+		} @else {
+			@include icn-styles;
+		}
+		content: icn-char($filename);
+	}
+}
+
+.icn-clock {
+	@include icn(clock);
+}
+.icn-fb {
+	@include icn(fb);
+}
+.icn-insta {
+	@include icn(insta);
+}
+.icn-mail {
+	@include icn(mail);
+}
+.icn-telegram {
+	@include icn(telegram);
+}
+.icn-wickr {
+	@include icn(wickr);
+}

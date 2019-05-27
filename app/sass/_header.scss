@@ -1,0 +1,40 @@
+.header{
+	border-bottom: 1px solid #eee;
+	.navbar-nav{
+		.nav-item{
+			.nav-link{
+				color: #9f9f9f;
+				margin-right: 24px;
+				&:hover{
+					color: #28c4f4;
+				}
+			}
+			&.active{
+				.nav-link{
+					color: #28c4f4;
+				}
+			}
+		}
+	}
+	.navbar-brand{
+		margin-right: 76px;
+		@include media-breakpoint-down(md) {
+			margin-right: auto;
+		}
+	}
+	.navbar-toggler{
+		border-color: #ccc;
+		padding:7px  5px;
+		outline: none;
+		em{
+			display: block;
+			width: 25px;
+			height: 3px;
+			border-radius: 3px;
+			background: #ccc;
+			+ em{
+				margin-top: 5px;
+			}
+		}
+	}
+}
