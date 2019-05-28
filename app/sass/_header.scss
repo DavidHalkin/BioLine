@@ -18,6 +18,11 @@
 	}
 	.navbar-brand{
 		margin-right: 76px;
+		
+		img{
+			width: 114px;
+			height: 50px;
+		}
 		@include media-breakpoint-down(md) {
 			margin-right: auto;
 		}
