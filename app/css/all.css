@@ -159,15 +159,15 @@ h1 span, h2 span { font-weight: normal; }
 
 @media (min-width: 768px) { .col_ttl { max-width: 175px; -webkit-box-flex: 0; -webkit-flex: 0 0 175px; -ms-flex: 0 0 175px; flex: 0 0 175px; } }
 
-.product_prev { height: 320px; -webkit-border-top-left-radius: 14px; border-top-left-radius: 14px; -webkit-border-top-right-radius: 14px; border-top-right-radius: 14px; }
+.product_prev { height: 320px; -webkit-border-top-left-radius: 14px; border-top-left-radius: 14px; -webkit-border-top-right-radius: 14px; border-top-right-radius: 14px; padding: 10px; }
 
 @media (max-width: 991.98px) { .product_prev { height: 250px; } }
 
 @media (max-width: 767.98px) { .product_prev { height: 200px; } }
 
-.product_prev a { position: relative; display: block; height: 100%; }
+.product_prev a { position: relative; display: block; height: 100%; overflow: hidden; }
 
-.product_prev a img { max-width: 100%; max-height: 100%; margin: auto; top: 0; bottom: 0; left: 0; right: 0; position: absolute; padding: 10px; }
+.product_prev a img { max-width: 100%; max-height: 100%; margin: auto; top: 0; bottom: 0; left: 0; right: 0; position: absolute; -webkit-transition: all .5s ease-out; -o-transition: all .5s ease-out; transition: all .5s ease-out; }
 
 .one_product { -webkit-border-radius: 14px; border-radius: 14px; -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1); box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1); }
 
@@ -188,6 +188,8 @@ h1 span, h2 span { font-weight: normal; }
 @media (max-width: 991.98px) { .one_product .product_inf strong { font-size: 26px; line-height: 28px; } }
 
 @media (max-width: 767.98px) { .one_product .product_inf strong { font-size: 23px; line-height: 26px; } }
+
+.one_product:hover .product_prev img { -webkit-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
 
 @media (min-width: 768px) { .code_section h1 { font-size: 24px; } }
 

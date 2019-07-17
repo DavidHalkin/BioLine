@@ -135,6 +135,7 @@ h1,h2{
 	height: 320px;
 	border-top-left-radius: 14px;
 	border-top-right-radius: 14px;
+	padding: 10px;
 	@include media-breakpoint-down(md) {
 		height: 250px;
 	}
@@ -145,6 +146,8 @@ h1,h2{
 		position: relative;
 		display: block;
 		height: 100%;
+		overflow: hidden;
+
 		img{
 			max-width: 100%;
 			max-height: 100%;
@@ -154,7 +157,8 @@ h1,h2{
 			left: 0;
 			right: 0;
 			position: absolute;
-			padding: 10px;
+			// padding: 10px;
+			transition: all .5s ease-out;
 		}
 	}
 }
@@ -210,6 +214,14 @@ h1,h2{
 			@include media-breakpoint-down(sm) {
 				font-size: 23px;
 				line-height: 26px;
+			}
+		}
+	}
+	&:hover{
+		.product_prev{
+			img{
+				transform:scale(1.2);
+
 			}
 		}
 	}
